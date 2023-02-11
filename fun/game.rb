@@ -3,4 +3,4 @@
 # between the files
 require './input_layer.rb'
 
-InputLayer.new
+NameGame.new

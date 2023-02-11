@@ -1,18 +1,22 @@
-class NameGame
-  attr_reader :name, :mood
+require './input_layer.rb'
 
-  def initialize(name)
-    @name = name
+class NameGame
+  attr_accessor :name, :mood
+
+  def initialize
+    puts "Tell me your name"
+    @name = InputLayer.new.input
+    return_name
   end
 
   def start
     return_name
   end
-  
+
   private 
 
   def get_mood
-    @mood = gets.chomp
+    @mood = InputLayer.new.input
     return_mood
   end
 

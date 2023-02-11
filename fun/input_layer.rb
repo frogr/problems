@@ -1,12 +1,16 @@
 require './namegame.rb'
 
 class InputLayer
+  attr_accessor :input
   def initialize
-    puts "Tell me your name"
-    run_name_game(gets.chomp)
-  end 
+    @input = get_input
+  end
 
-  def run_name_game(input)
-    NameGame.new(input).start
+  def get_input
+    gets.chomp
+  end
+
+  def input
+    @input
   end
 end
